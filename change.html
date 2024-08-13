@@ -1,0 +1,28 @@
+
+<html lang="en">
+<head>
+    <title>colour</title>
+    <link rel="stylesheet" href="./pant.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h2 id="color-code">#fff</h2>
+            <button id="btn">Click Me</button>
+        </div>
+    </div>
+<script>
+const getcolor=()=>{
+    const randomNumber = Math.floor(Math.random()* 16777215);
+    const randomCode ="#" + randomNumber.toString(16);
+    document.body.style.backgroundColor=randomCode;
+    document.getElementById("color-code").innerHTML=randomCode;
+}
+document.getElementById("btn").addEventListener(
+    "click",
+    getcolor
+)
+getcolor();
+</script>
+</body>
+</html>
